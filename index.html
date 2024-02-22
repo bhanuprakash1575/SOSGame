@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="msg-container">
+        <h1>Welcome to SOS Game</h1>
+        <p>Choose Number of Rows and Columns</p>
+        <ul class="input-container">
+            <li>
+                <label for="Rows">Rows:</label>
+                <input type="number" name="Rows" id="Rows" min="3" >
+            </li>
+            <li>
+                <label for="Columns">Columns:</label>
+                <input type="number" name="Columns" id="Columns" min="3"  >
+            </li>
+        </ul>
+        <div class="buttons-container">
+            <button class="button-89" id="startBtn">Start</button>
+            <button class="button-89" id="rulesBtn">Rules</button>
+        </div>
+    </div>
+
+    <div class="rules-container">
+        <h1>Rules</h1>
+        <ul>
+            <li><strong> Setup:</strong> Draw an NxM grid (where N and M are the number of rows and columns, respectively).</li>
+            <li><strong>Players:</strong>  The game is typically played by two players.</li>
+            <li><strong>Turns: </strong>Players take turns to add either an "S" or an "O" to an empty cell.</li>
+            <li><strong>Scoring:</strong>Points are awarded for each occurrence of the word "SOS" formed by a player.</li>
+            <li><strong>For example:</strong>if a player creates "SOS" horizontally in a row, they receive a point. The same goes for vertical and diagonal formations.</li>
+            <li><strong>Winning Condition:</strong>The game continues until all cells in the grid are filled. The player with the most points at the end of the game wins.</li>
+            <li><strong>Draw:</strong> If the entire grid is filled, and there is a tie in points, the game is declared a draw.</li>
+        </ul>
+        <button class="button-89" id="backBtn">Back</button>
+    </div>
+
+    
+    <p class="scorecard"><span class="player1"></span><span class="player2"></span></p>  
+    <div class="game-board">
+        <ul class="button-space"></ul>
+    </div>
+
+
+    <script src="first.js"></script>
+</body>
+</html>

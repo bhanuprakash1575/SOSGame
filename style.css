@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: url(./bg.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.msg-container{
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255,0.4);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    & .input-container{
+        list-style-type: none;
+        display: flex;
+        gap: 15%;
+
+        & li {
+            display: flex;
+            align-items: center;
+            & input{
+                width: 40px;
+                aspect-ratio: 1;
+                border: 2px solid black;
+            }
+        }
+    }
+}
+.buttons-container{
+    display: flex;
+    gap: 2rem;
+}
+.scorecard{
+    font-size: 1.5rem;
+    width: 30%;
+    display: none;
+    justify-content: space-around;
+}
+.game-board{
+    display: none;
+    max-width: 98%;
+    max-height: 95vh;
+    margin: auto;
+    overflow:scroll;
+    overflow-x: scroll;
+    border: 5px solid yellow;
+    & .button-space{
+       list-style-type: none;       
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.row{
+    display: flex;
+}
+.box{
+    min-width :50px;
+    color:white;
+    height : 50px;
+    background-color :black;
+    border : 3px solid rebisque;
+}
+
+.rules-container{
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1%;
+    background-color: rgba(255, 255, 255,0.4);
+    padding: 1.5rem;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    & ul{
+        display: flex;
+        flex-direction: column;
+        list-style: decimal;
+        gap: 1rem;
+    }
+    display: none;
+}
+.gameover{
+    font-size: 3rem;
+    width: max-content;
+    border-radius: 3%;
+}
+.won{
+    background-color: rgb(0, 128, 0);
+
+}
+.draw{
+    background-color: cyan;
+}
+
+@media (width<256px) {    
+.msg-container .input-container ,.buttons-container {
+    flex-direction: column;
+    gap:1rem;
+}
+}
+
+
+
+
+
